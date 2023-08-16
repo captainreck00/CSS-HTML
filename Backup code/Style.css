@@ -1,0 +1,36 @@
+nav{
+    height: 150px;
+    width: 100%;
+    border-radius: 11px;
+    background-color: black;
+    color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    padding: 0 10px;
+    font-size: 50px;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the background behind other elements */
+    background-image: url('Hotel2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(4px); /* Adjust the blur value as needed */
+    /* Maintain content visibility on top of the blurred background */
+    backdrop-filter: opacity(50%);
+}
+
+html{
+    min-height: 100%;
+}
