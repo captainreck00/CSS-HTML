@@ -1,28 +1,19 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 from flask import request
-
+import Data_functions as func 
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:5500"}})  # Allow requests from your web page's origin
+CORS(app)  # This enables CORS for your entire app
 
-@app.route('/api/data', methods=['POST', 'OPTIONS'])  # Include OPTIONS method
+@app.route('/',methods=['POST'])
 def login():
-    if request.method == 'OPTIONS':  # Handle preflight requests
-        response = app.response_class(
-            response='',
-            status=200,
-            headers={
-                'Access-Control-Allow-Origin': 'http://127.0.0.1:5500',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'POST',
-            }
-        )
-        return response
-
-    data = request.get_json()
-
-    response_data = {"Check": "Yes"}
+    data=request.get_json()
+    print(data["email"],data['password'])
+    if func.verify(data['email'],data['password']):
+        response_data={"verified":"yes"}
+    else:    
+        response_data={"verified":"no"}
     return jsonify(response_data)
 
 if __name__ == '__main__':
