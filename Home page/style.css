@@ -1,0 +1,403 @@
+@font-face {
+    font-family: 'Vision'; 
+    src: url('fonts/Vision.otf') format('opentype'); 
+}
+@font-face {
+    font-family: 'Vision-Bold'; 
+    src: url('fonts/Vision-Bold.otf') format('opentype'); 
+}
+
+
+
+.home {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about{
+    padding-block: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(16, 16, 16);
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for spacing */
+    margin: 10px; /* Add margin to create space from edges */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    border-radius: 10px; /* Rounded corners */
+    filter: grayscale(20%); /* Grayscale filter (adjust as needed) */
+    /* OR */
+    /* filter: sepia(20%); */
+}
+
+.home h1 {
+    font-family: 'Your Modern Font', sans-serif; /* Replace 'Your Modern Font' with your chosen font */
+    /* Add other font-related styles as needed */
+}
+
+.home .image-overlay {
+    position: relative;
+}
+
+.home .image-overlay img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home .image-overlay p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#name {
+    color: #F7F2FD; /* Text color */
+    font-size: 36px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Letter spacing */
+    margin: 0; /* Remove any default margin */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px; /* Added spacing between logo and name */
+}
+
+.home img {
+    max-width: 90%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain the aspect ratio and prevent distortion */
+    /* Add any additional styling you need */
+}
+
+
+#name {
+    color: #F7F2FD;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+body{
+    background-color: #F2F3EB;
+    font-family: "Vision";
+    margin: 0;
+    color: #F2F3EB;
+}
+
+
+h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+#about_para{
+    color: rgb(16,16,16);
+    max-width:70%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+
+
+.section{
+    margin-block: 30px;
+}
+
+.heading{
+    text-align: center;
+    color: rgb(16,16,16);
+    font-size: 40px;
+}
+
+/* Style the Services section */
+.services {
+    background-color: #F2F3EB; /* Set background color for the entire section */
+    padding: 30px;
+    text-align: center;
+}
+
+/* Create a container for the service tokens */
+.serv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style each service token */
+.serv {
+    background-color: #101010; /* Background color for service tokens */
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Distribute them evenly in a row with spacing */
+    transition: transform 0.2s;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.serv:hover {
+    transform: scale(1.05);
+}
+
+/* Style the service headings */
+#serv-head2 {
+    font-size: 40px;
+    color: #101010; /* Text color for service headings */
+}
+
+/* Style the service titles */
+#serv-head3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #e1a8c5; /* Text color for service titles */
+}
+
+/* Style the service descriptions */
+.serv p {
+    font-size: 16px;
+    color: #F2F3EB; /* Text color for service descriptions */
+}
+
+.carousel{
+    position: relative;
+    height: 600px;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.carousel-images{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-container{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+    position: relative;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slides{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-btn{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.prev{
+    left: -40px
+}
+
+.next{
+    z-index: 1;
+    right: -40px;
+}
+
+.carousel-nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel-indicator{
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(16,16,16);
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    backface-visibility: hidden;
+}
+
+.carousel-indicator.currentSlide{
+    background: #e1a8c5;
+}
+
+.is-hidden{display: none;}
+
+
+/* Style the Things to Do section with the Black and Gold color theme */
+.things {
+    background-color: #F2F3EB; /* Background color for the section */
+    padding: 30px; /* Add padding for spacing */
+}
+
+/* Style individual "explore" elements */
+.explore {
+    background-color: #000; /* Black background color for each "explore" box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add padding for spacing within each box */
+    margin: 20px; /* Add margin for spacing between boxes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: transform 0.2s; /* Add a subtle hover effect */
+}
+
+.explore:hover {
+    transform: scale(1.05); /* Enlarge the box on hover */
+}
+
+/* Style the "Things to Do" headings with the Black and Gold color theme */
+#things-top {
+    font-size: 24px; /* Increase font size for the section heading */
+    color: #000; /* Black text color for the heading */
+    text-align: center; /* Center-align the heading */
+}
+
+/* Style the "explore" headings with the Black and Gold color theme */
+.things-head {
+    font-size: 20px; /* Set font size for the headings */
+    font-weight: bold; /* Add bold font weight */
+    color: #e1a8c5; /* Gold text color for the headings */
+}
+
+/* Style the "explore" descriptions with the Black and Gold color theme */
+.things-desc {
+    font-size: 16px; /* Set font size for the descriptions */
+    color: #F2F3EB; /* Text color for the descriptions */
+}
+
+
+.contact{
+    background-color: rgb(16,16,16);
+    height: 500px;
+    margin-inline: 220px;
+    margin-bottom: 70px;
+    border-radius: 8px;   
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.contact-elem{
+    margin: 20px 10px;
+    width: 50%;
+}
+
+.find{
+    border-right: 1px solid #F2F3EB;
+}
+
+.nav-links{
+    color: #F7F2FD;
+    text-decoration: none;
+    align-self: center;
+}
+
+.links{
+    position: relative;
+    right: 0px;
+    padding-left: 10px;
+    display: inline-flex;
+    height: 100%;
+    align-self: center;
+    gap: 10px;
+    background-color: rgb(16,16,16);
+}
+
+.contact-links{
+    background-color: rgb(16,16,16);
+    height: 100px;
+    width: auto;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.terms{
+    position: relative;
+    bottom: 0;
+}
+
+#corp{
+    color: #848583;
+}
+
+.location{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.gallery{
+    padding-block: 5px;
+}
+
+h1{
+    color: rgb(16,16,16);
+}
+
+.find-links{
+    font-size: 50px;
+    color: white;
+    background-color: rgb(16,16,16);
+    border: 0;
+}
+
+.social-link{
+    color: #F2F3EB;
+    background-color:rgb(16, 16, 16) ;
+    text-decoration: none;
+    font-size: 28px;
+    border: none;
+    margin-block: 10px;
+}
+
+.contact-link{
+    text-decoration: none;
+}
+
+.contact-elem>h3{
+    font-size: 30px;
+}
